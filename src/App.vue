@@ -25,9 +25,11 @@ export default {
 
 <template>
   <div id="app">
-    <Header/>
+    <Header 
+      @click="setMenu()"
+      :openMenu="openMenu"
+    />
     <div class="main-content-wrapper">
-      <button class="button menu-button menu-add-button" @click="setMenu">add</button>
       <TodoList v-if="!openMenu"/>
       <AddItem v-else/>
     </div>

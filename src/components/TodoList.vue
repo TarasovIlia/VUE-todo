@@ -1,11 +1,16 @@
 <script>
 //import draggable from 'vuedraggable'
-import DELETE_ITEM from '../api/DELETE_ITEM'
+//import DELETE_ITEM from '../api/DELETE_ITEM'
+import card from './card.vue'
 
 export default {
+  components: {
+    card
+  },
   data() {
     return {
       parts : [],
+      cartViewChange : false
     }
   },
   created() {
@@ -14,39 +19,43 @@ export default {
     .then(data => (this.parts = data))
   },
   methods : {
-    deleteItem : (id, checked) => {
-      checked ? DELETE_ITEM(id) : null
+    deleteItem(id)  {
+      //DELETE_ITEM(id)
+      console.log('kek' + id)
     },
+    setDone() {
+      this.parts.done = !this.parts.done
+    },
+    setViewChange() {
+      this.cartViewChange = !this.cartViewChange
+    }
   }
 }
 </script>
 
-
 <template>
-  <section class="todo-list">
-    <div 
+  <section :class="{
+    'todo-list' : true,
+    'todo-grid' : cartViewChange === true
+  }">  
+  <button 
+    class="button menu-button menu-change-view-button"
+    @click="setViewChange()"
+  >
+  {{cartViewChange ? "List" : "Grid"}}
+  </button>
+    <card 
       v-for="(part, index) in parts"
       :key="part.id"
-      :class="{
-        'todo-item': true,
-        'task-done': part.done === true,
-        non: part.delete === false
-      }"
-    >
-      <h1>{{ index + 1 }}</h1>
-      <h1>{{ part.title }}</h1>
-      <p>{{ part.task }}</p>
-      <div :class="[
-        'important',
-        {non: part.important === false}
-      ]"
-      ></div>
-      <div :class="{
-        indicator: true,
-        non: part.done === !true
-      }"
-      ><p @click="deleteItem(part.id, part.done)">delete</p></div>
-      <input class="checkout-input" v-on:change="part.done = !part.done" type="checkbox" name="done" id="">
-    </div>
+      :id="part.id"
+      :index="index"
+      :title="part.title"
+      :task="part.task"
+      :done="part.done"
+      :important="part.important"
+      :cartViewGrid="cartViewChange"
+      @click="deleteItem()"
+      @change="setDone()"
+    />
   </section>
 </template>

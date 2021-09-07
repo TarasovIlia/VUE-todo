@@ -35,7 +35,7 @@ export default {
             <label for="important"><h1>Important</h1></label>
             <input v-on:change="data.important = !data.important" class="menu-checkox checkout-input" type="checkbox" id="important">
         </div>
-        <button class="button menu-button add-button" v-on:click="addItem(data, $event)">add new task</button>
+        <button class="button menu-button add-button" @click.prevent="addItem(data, $event)">add new task</button>
     </form>
 </section>
 </template>

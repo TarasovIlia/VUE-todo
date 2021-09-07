@@ -1,90 +1,21 @@
 .todo-list {
     width: 100%;
+    height: 70vh;
     padding: 20px;
-    .todo-item {
-        width: 90%;
-        box-shadow: 3px 4px 8px 0px rgba(0, 0, 0, 0.3);
-        background-color: #fff;
-        margin: 20px 0px;
-        padding: 20px;
-        border-radius: 12px;
 
-        display: inline-flex;
-        align-items: center;
-
-        position: relative;
-
-        h1 {
-            text-align: left;
-            &:first-child {
-                width: 70px;
-                margin-right: 20px;
-                font-size: 18px;
-            }
-            &:nth-child(2) {
-                width: 240px;
-                margin-right: 40px;
-            }
-        }
-        
-        p {
-            text-align: left;
-            &:nth-child(3) {
-                width: 40%;
-            }
-        }
-
-        cursor: pointer;
-        transition-duration: 0.1s;
-        
-        &:active {
-            box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
-            transition-duration: 0.1s;
-        }
-
-        
-        .checkout-input {
-            position: absolute;
-            left: -40px;
-        }
-    }
+    background-color: tomato;
+    border-radius: 22px;
+    overflow-y: auto;
 }
 
-.indicator {
-    color: rgb(253, 61, 28);
-    font-weight: 500;
-    padding: 5px 20px;
-
-    position: absolute;
-    right: -100px;
-
+.todo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
 }
-.non {
+
+::-webkit-scrollbar {
     display: none;
 }
 
-.task-done {
-    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2) !important;
-    >h1 {
-        opacity: 0.4;
-        &:nth-child(2){
-            text-decoration: line-through;
-        }
-    }
-    >p {
-        opacity: 0.4;
-        &:nth-child(3){
-            text-decoration: line-through;
-        }
-    }
-}
-
-.important {
-    width: 20px;
-    height: 20px;
-    background-color: sandybrown;
-    border-radius: 50%;
-    position: absolute;
-
-    right: 20px;
-}
