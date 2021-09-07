@@ -1,6 +1,8 @@
 <script>
 //import draggable from 'vuedraggable'
-//import DELETE_ITEM from '../api/DELETE_ITEM'
+import DELETE_ITEM from '../api/DELETE_ITEM'
+import CHANGE_ITEM_DONE from '../api/CHANGE_ITEM_DONE'
+
 import card from './card.vue'
 
 export default {
@@ -18,13 +20,19 @@ export default {
     .then(response => response.json(response))
     .then(data => (this.parts = data))
   },
+  updated() {
+    fetch("http://localhost:3000/todoList/")
+    .then(response => response.json(response))
+    .then(data => (this.parts = data))
+  },
   methods : {
     deleteItem(id)  {
-      //DELETE_ITEM(id)
-      console.log('kek' + id)
+      DELETE_ITEM(id)
     },
-    setDone() {
+    setDone(id) {
       this.parts.done = !this.parts.done
+      console.log(this.parts.done)
+      CHANGE_ITEM_DONE(id,this.parts.done)
     },
     setViewChange() {
       this.cartViewChange = !this.cartViewChange
@@ -54,8 +62,8 @@ export default {
       :done="part.done"
       :important="part.important"
       :cartViewGrid="cartViewChange"
-      @click="deleteItem()"
-      @change="setDone()"
+      @click="deleteItem($event,id)"
+      @change="setDone($event,id)"
     />
   </section>
 </template>

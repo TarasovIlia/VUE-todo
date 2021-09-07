@@ -1,5 +1,6 @@
 .cart-grid-view {
     width: 100%;
+    height: 260px;
     margin: 0px;
     padding: 14px;
     overflow: hidden;
@@ -13,9 +14,16 @@
         bottom: 0px;
     }
 
-    .checkout-input {
-        position: absolute;
-        right: 20px;
+    .checkout-container {
+        right: 40px;
         top: 20px;
+    }
+
+    .indicator {
+        color: rgb(253, 61, 28);
+        font-weight: 500;
+        padding: 5px 20px;
+    
+        position: absolute;    
     }
 }

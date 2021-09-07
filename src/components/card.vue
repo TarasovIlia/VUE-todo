@@ -26,7 +26,6 @@ export default ({
     >
         <h1>{{ index + 1 }}</h1>
         <h1>{{ title }}</h1>
-        <p>{{cartViewGrid}}</p>
         <p>{{ task }}</p>
         <div :class="[
             'important',
@@ -38,6 +37,11 @@ export default ({
             non: done === false
         }"
         ><p @click="$emit('click', id)">delete</p></div>
-        <input class="checkout-input" @change="$emit('change')" type="checkbox" name="done" id="">
+        <div :class="{
+            'checkout-container' : true
+        }">
+            <input class="checkout-default" @change.once="$emit('change', id)" type="checkbox" name="done" :id="id">
+            <label :for="id" class="custom-checkout"></label>
+        </div>
     </div>
 </template>

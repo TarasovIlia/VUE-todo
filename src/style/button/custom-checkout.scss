@@ -1,0 +1,44 @@
+.checkout-container {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    .checkout-default {
+        display: none;
+    }
+    .checkout-default:checked~.custom-checkout {
+        box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+        &::before {
+            background-color: rgb(19, 67, 223);
+        }
+    }
+    .custom-checkout {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 9px;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 1px 2px 5px 0px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition-duration: 0.3s;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 60%;
+            height: 60%;
+            background-color: rgb(255, 255, 255);
+            border-radius: 6px;
+            top: 5px;
+            left: 6px;
+            
+            
+        }
+        &:hover {
+            box-shadow: 3px 6px 11px 1px rgba(0, 0, 0, 0.5);
+            transition-duration: 0.4s;
+        }
+        &:active {
+            box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.2);
+            transition-duration: 0.1s;
+        }
+    }
+}

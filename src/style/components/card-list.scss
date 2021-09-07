@@ -35,8 +35,19 @@
         right: 20px;
     }
 
-    .checkout-input {
+    .checkout-container {
+        left: -70px;
+    }
+
+    .indicator {
+        background-color: #fff;
+        color: red;
+        border-radius: 10px;
+        font-weight: 500;
+        padding: 5px 20px;
+    
         position: absolute;
-        left: -40px;
+        right: -90px;
+    
     }
 }

@@ -1,67 +1,18 @@
 {
   "todoList": [
     {
-      "title": "asfasf",
-      "task": "3332222",
-      "done": false,
+      "title": "fafsf",
+      "task": "asfafsf",
+      "done": true,
       "important": false,
-      "id": 13
+      "id": 2
     },
     {
-      "title": "dasd",
-      "task": "ddd",
+      "title": "123123",
+      "task": "12333333",
       "done": false,
       "important": true,
-      "id": 14
-    },
-    {
-      "title": "asdas",
-      "task": "dads",
-      "done": false,
-      "important": true,
-      "id": 15
-    },
-    {
-      "title": "LOLOO",
-      "task": "wwwwwwwwwwww",
-      "done": false,
-      "important": false,
-      "id": 16
-    },
-    {
-      "title": "aa",
-      "task": "dd",
-      "done": false,
-      "important": true,
-      "id": 17
-    },
-    {
-      "title": "wwwwww",
-      "task": "daaaaaaaa",
-      "done": false,
-      "important": true,
-      "id": 18
-    },
-    {
-      "title": "ddawaws",
-      "task": "asss",
-      "done": false,
-      "important": true,
-      "id": 19
-    },
-    {
-      "title": "asdad",
-      "task": "asssss",
-      "done": false,
-      "important": false,
-      "id": 20
-    },
-    {
-      "title": "asdad",
-      "task": "asssss",
-      "done": false,
-      "important": false,
-      "id": 21
+      "id": 3
     }
   ]
 }
