@@ -1,0 +1,28 @@
+.form-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 40%;
+    margin: 0px auto;
+    h1 {
+        text-align: left;
+    }
+    .add-button {
+        margin: 40px 0px;
+    }
+    .row {
+        margin-top: 30px;
+        margin-bottom: 10px;
+
+        display: inline-flex;
+        align-items: center;
+        .menu-checkox {
+            margin-left: 40px;
+        }
+    }
+    >label {
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+}

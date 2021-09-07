@@ -9,9 +9,11 @@
     "json": "json-server --watch ./server/data.json"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "sass-loader": "^10",
     "vue": "^2.6.11",
+    "vue-axios": "^3.2.5",
     "vuedraggable": "^2.24.3"
   },
   "devDependencies": {

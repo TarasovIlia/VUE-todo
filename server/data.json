@@ -1,28 +1,18 @@
 {
-    "todoList" : [
-        {
-            "title" :  "go to work",
-            "task" : "wake up and go to work",
-            "id" : 1,
-            "done" : false
-        },
-        {
-            "title" :  "go to work",
-            "task" : "wake up and go to work",
-            "id" : 2,
-            "done" : true
-        },
-        {
-            "title" :  "go to work",
-            "task" : "wake up and go to work",
-            "id" : 3,
-            "done" : false
-        },
-        {
-            "title" :  "go to work",
-            "task" : "wake up and go to work",
-            "id" : 4,
-            "done" : true
-        }
-    ]
+  "todoList": [
+    {
+      "title": "11",
+      "task": "fafasf",
+      "done": false,
+      "important": false,
+      "id": 9
+    },
+    {
+      "title": "asfasf",
+      "task": "3332222",
+      "done": false,
+      "important": false,
+      "id": 13
+    }
+  ]
 }

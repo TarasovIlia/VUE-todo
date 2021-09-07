@@ -4,4 +4,18 @@
     background-color: #fff;
     font-size: 22px;
     font-weight: 600;
-} 
+    cursor: pointer;
+}
+input :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+textarea :active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+    resize: none;
+}
+.checkout-input {
+    cursor: pointer;
+}
